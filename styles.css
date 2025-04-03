@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #221a0f;
+    min-height: 100vh;
+}
+nav{
+    background-color: #5e452b;
+    color: #d3af86;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+    height: 50px;
+}
+nav a{
+    height: 100%;
+    padding: 0 25px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #d3af86;
+}
+nav a:hover{
+    background-color: #d3af8639;
+}
+nav li:first-child{
+    margin-left: auto;
+}
+.navHeader{
+    height: 100%;
+    flex-grow: 1;
+    text-align: center;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(245, 222, 179, 0.33);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar.active{
+    display: flex;
+    flex-direction: column;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+
+/*Used for Browsing on Mobile*/
+@media(max-width: 1000px){
+    .hideOnMobile{
+        display: none;
+    }
+}
+@media(max-width: 200px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
+/*Start of Terminal Styling*/
+.terminalWindow{
+    width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #221a0f;
+    border: 1px  solid #f79a32;
+}
+textarea{
+    background-color: transparent;
+    color: #d3af86;
+    border: none;
+    resize: none;
+    outline: none;
+    position: absolute;
+    left: -9000px;  
+}
+.txtInput{
+    position: absolute;
+    opacity: 0;
+}
+.inputTxt{
+    color: #d3af86;
+}
+.typedOut{
+    display: flex;
+    align-items: center;
+}
+#userTyping{
+    color: #d3af86;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.cursor{
+    display: inline-block;
+    animation: blinker 1s linear infinite;
+    color: #f79a32;
+    font-size: small;
+}
+@keyframes blinker{
+    50%{ 
+        opacity: 0;
+    }
+}
+#banner{
+    font-size: .5em;
+    color: white;
+    
+}
+
+
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Man Pages(4) Dummies</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!--Nav Bar-->
+        <nav>
+            <ul class="sidebar">
+                <li id="closeSB"><a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#d3af86">
+                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                    </svg>
+                </a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <ul>
+                <li id="showSB"><a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#d3af86">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                    </svg>
+                </a></li>
+                <li class="navHeader"><h1>Linux Man Pages(4) Dummies</h1></li>
+                <li class="hideOnMobile"><a href="#">Home</a></li>
+                <li class="hideOnMobile"><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <!--Terminal-->
+        <div class="terminalWindow" onclick="document.getElementById('txtInput').focus();">
+            <textarea 
+            type="text"
+            id="txtInput"
+            onkeyup="typeIt(this, event)"
+            onkeydown="typeIt(this, event); moveIt(this.value.length, event)"
+            onkeypress="typeIt(this, event)" 
+            autofocus
+            ></textarea>
+            <div id="typedOut">
+                <pre id="banner"></pre>
+                <br>
+                <br>
+                <span id="userTyping"></span><b class="cursor" id="cursor">█</b>
+            </div>
+        </div>
+        <script src="cmd.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
